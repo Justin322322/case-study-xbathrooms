@@ -30,7 +30,7 @@ export function Reveal({
   y = 40,
   blur = true,
   stagger = 0.1,
-  threshold = 0.15,
+  threshold = 0.25, // Increased default threshold to 0.25 (starts when element is at 75% of viewport)
   cascade = false,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -40,35 +40,40 @@ export function Reveal({
       const element = ref.current;
       if (!element) return;
 
+      // Force a refresh to ensure correct start positions, especially after hydration/layout shifts
+      ScrollTrigger.refresh();
+
       const targets = cascade ? element.children : element;
 
-      // Initial state
-      gsap.set(targets, {
-        y: y,
-        opacity: 0,
-        filter: blur ? "blur(12px)" : "none",
-        willChange: "transform, opacity, filter",
-      });
-
-      if (cascade) {
-        gsap.set(element, { opacity: 1 });
+      // Make visible immediately for GSAP to handle
+      if (element) {
+        element.style.visibility = "visible";
       }
 
       // Animation
-      gsap.to(targets, {
-        y: 0,
-        opacity: 1,
-        filter: "blur(0px)",
-        duration: duration,
-        delay: delay,
-        ease: "power3.out",
-        stagger: stagger,
-        scrollTrigger: {
-          trigger: element,
-          start: `top ${100 - threshold * 100}%`,
-          toggleActions: "play none none none",
+      gsap.fromTo(
+        targets,
+        {
+          y: y,
+          opacity: 0,
+          filter: blur ? "blur(12px)" : "none",
+          willChange: "transform, opacity, filter",
         },
-      });
+        {
+          y: 0,
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: duration,
+          delay: delay,
+          ease: "power3.out",
+          stagger: stagger,
+          scrollTrigger: {
+            trigger: element,
+            start: `top ${100 - threshold * 100}%`,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     },
     { scope: ref }
   );
@@ -76,7 +81,7 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={cn(cascade ? "" : "opacity-0", className)}
+      className={cn("invisible", className)} // Use invisible to prevent FOUC, GSAP will handle visibility
     >
       {children}
     </div>

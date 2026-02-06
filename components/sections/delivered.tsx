@@ -35,96 +35,105 @@ export function DeliveredSection() {
           </div>
         </Reveal>
         
-        <Reveal cascade stagger={0.1} className="grid gap-6">
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={FlowIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
+        <div className="grid gap-6">
+          <Reveal>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={FlowIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Sales Pipeline</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  6-stage pipeline (New Lead → Contacted → Site Visit → Proposal Sent → Won → Lost) with trigger fields, documentation fields, and opportunity values at every stage.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Sales Pipeline</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                6-stage pipeline (New Lead → Contacted → Site Visit → Proposal Sent → Won → Lost) with trigger fields, documentation fields, and opportunity values at every stage.
-              </p>
+          </Reveal>
+          
+          <Reveal delay={0.1}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={RepeatIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Automation Workflows</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  9 workflows: 5 inquiry confirmations, missed call trigger, site visit confirmation, proposal sent notification, follow-up sequence, review request, Won/Lost handlers, FAQ auto-reply.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={RepeatIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={File01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Integrations</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  Google Analytics, Google Business Profile, Facebook, Instagram — all connected to GHL.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Automation Workflows</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                9 workflows: 5 inquiry confirmations, missed call trigger, site visit confirmation, proposal sent notification, follow-up sequence, review request, Won/Lost handlers, FAQ auto-reply.
-              </p>
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={ChartLineData01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Full Ad Audit</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  Complete audit of previous agency&apos;s Meta ($23,789 / 90 days) and Google (A$397.57 / 3 conversions) campaigns with actionable findings.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={File01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+          </Reveal>
+
+          <Reveal delay={0.4}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={Megaphone01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Meta Ad Campaigns</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  16 campaigns across static, carousel, and video formats with proper budget allocation, creative testing, and systematic scaling.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Integrations</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                Google Analytics, Google Business Profile, Facebook, Instagram — all connected to GHL.
-              </p>
+          </Reveal>
+
+          <Reveal delay={0.5}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={ChartLineData01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Google Ad Campaigns</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  New Performance Max and Search campaigns set up with proper conversion tracking and audience signals.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={ChartLineData01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
+          </Reveal>
+
+          <Reveal delay={0.6}>
+            <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
+              <div className="shrink-0">
+                <HugeiconsIcon icon={InboxIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Reporting Dashboard</h3>
+                <p className="mt-2 text-base text-muted-foreground">
+                  Live dashboard tracking ad spend, CPL, conversion rates, and total pipeline value in real-time.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Full Ad Audit</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                Complete audit of previous agency&apos;s Meta ($23,789 / 90 days) and Google (A$397.57 / 3 conversions) campaigns with actionable findings.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={Megaphone01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Meta Ad Campaigns</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                16 campaigns across static, carousel, and video formats with proper budget allocation, creative testing, and systematic scaling.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={ChartLineData01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Google Ad Campaigns</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                New Performance Max + active Search campaign at A$60/day with configured audience signals and search themes.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={File01Icon} strokeWidth={2} className="h-8 w-8 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Landing Pages</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                New landing pages replacing the previous agency&apos;s poor-quality page, with form submissions flowing directly into the GHL pipeline.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-4 rounded-2xl bg-gradient-to-br from-background via-muted/50 to-primary/5 p-6 shadow-sm">
-            <div className="shrink-0">
-              <HugeiconsIcon icon={InboxIcon} strokeWidth={2} className="h-8 w-8 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">Lead Tracking System</h3>
-              <p className="mt-2 text-base text-muted-foreground">
-                End-to-end tracking from form submission to close — every lead auto-created, assigned, and visible to the team with full revenue visibility.
-              </p>
-            </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

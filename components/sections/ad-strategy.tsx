@@ -132,40 +132,44 @@ export function AdStrategySection() {
           </div>
         </Reveal>
 
-        <Reveal cascade className="grid gap-6 lg:grid-cols-2">
-          <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card/60 px-5 py-4 sm:px-6">
-            <div className="flex flex-col gap-2">
-              <p className="text-sm font-semibold uppercase leading-relaxed tracking-wide text-foreground">
-                Meta Ads Audit
-              </p>
-              <div className="flex flex-wrap gap-3 text-sm font-medium text-foreground">
-                <span className="text-destructive">$23,789.33 AUD spent</span>
-                <span className="text-muted-foreground">•</span>
-                <span>90 days (Sep–Dec 2025)</span>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Reveal>
+            <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card/60 px-5 py-4 sm:px-6">
+              <div className="flex flex-col gap-2">
+                <p className="text-sm font-semibold uppercase leading-relaxed tracking-wide text-foreground">
+                  Meta Ads Audit
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm font-medium text-foreground">
+                  <span className="text-destructive">$23,789.33 AUD spent</span>
+                  <span className="text-muted-foreground">•</span>
+                  <span>90 days (Sep–Dec 2025)</span>
+                </div>
               </div>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Budget catastrophically fragmented across 25 ad sets at $10/day
-              each — zero statistical power.
-            </p>
-          </div>
-          <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card/60 px-5 py-4 sm:px-6">
-            <div className="flex flex-col gap-2">
-              <p className="text-sm font-semibold uppercase leading-relaxed tracking-wide text-foreground">
-                Google Ads Audit
+              <p className="text-sm text-muted-foreground">
+                Budget catastrophically fragmented across 25 ad sets at $10/day
+                each — zero statistical power.
               </p>
-              <div className="flex flex-wrap gap-3 text-sm font-medium text-foreground">
-                <span className="text-destructive">A$397.57 spent</span>
-                <span className="text-muted-foreground">•</span>
-                <span>Campaign period</span>
-              </div>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Only 3 conversions at A$132.52 per conversion — 0.59% conversion
-              rate with A$149.61 wasted.
-            </p>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card/60 px-5 py-4 sm:px-6">
+              <div className="flex flex-col gap-2">
+                <p className="text-sm font-semibold uppercase leading-relaxed tracking-wide text-foreground">
+                  Google Ads Audit
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm font-medium text-foreground">
+                  <span className="text-destructive">A$397.57 spent</span>
+                  <span className="text-muted-foreground">•</span>
+                  <span>Campaign period</span>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Only 3 conversions at A$132.52 per conversion — 0.59% conversion
+                rate with A$149.61 wasted.
+              </p>
+            </div>
+          </Reveal>
+        </div>
         
         <Reveal className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold text-foreground">
