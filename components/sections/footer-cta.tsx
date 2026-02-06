@@ -15,12 +15,12 @@ const features = [
 export function FooterCTASection() {
   return (
     <section 
-      className="mx-auto w-full max-w-full px-6 pb-24 pt-12 sm:px-8 lg:px-12 bg-gradient-to-b from-background via-muted/50 to-primary/5"
+      className="mx-auto w-full max-w-full px-4 pb-16 pt-12 sm:px-8 sm:pb-24 lg:px-12 bg-gradient-to-b from-background via-muted/50 to-primary/5"
     >
-      <div className="flex flex-col items-center gap-12 text-center max-w-4xl mx-auto">
+      <div className="flex flex-col items-center gap-8 sm:gap-12 text-center max-w-4xl mx-auto">
         {/* Quote */}
         <Reveal>
-          <blockquote className="text-balance text-2xl font-medium leading-relaxed text-foreground sm:text-3xl sm:leading-relaxed">
+          <blockquote className="text-balance text-xl font-medium leading-relaxed text-foreground sm:text-2xl sm:leading-relaxed lg:text-3xl">
             &quot;XBathrooms now has a single source of truth for every lead in their
             business. The system doesn&apos;t just track what happened —{" "}
             <span className="text-primary">
@@ -32,15 +32,15 @@ export function FooterCTASection() {
 
         {/* Features Pills */}
         <Reveal delay={0.2}>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {features.map((feature) => (
               <div
                 key={feature}
-                className="flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted/50"
+                className="flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted/50"
               >
                 <HugeiconsIcon
                   icon={CheckmarkCircle01Icon}
-                  className="h-4 w-4 text-emerald-600"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600"
                   strokeWidth={2.5}
                 />
                 <span>{feature}</span>
@@ -55,7 +55,7 @@ export function FooterCTASection() {
         </Reveal>
 
         {/* CTA */}
-        <Reveal delay={0.4}>
+        <Reveal delay={0.4} threshold={0.1}>
           <div className="flex flex-col items-center gap-6">
             <p className="text-lg font-medium text-muted-foreground">
               Ready to transform your business?

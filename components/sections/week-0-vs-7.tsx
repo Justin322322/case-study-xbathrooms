@@ -68,22 +68,22 @@ export function Week0VsWeek7Section() {
           {comparisonRows.map((item) => (
             <div
               key={item.before}
-              className="grid items-center gap-4 rounded-2xl border border-border bg-card/60 px-4 py-3 sm:grid-cols-[1fr_auto_1fr] sm:px-6"
+              className="flex flex-col gap-4 rounded-2xl border border-border bg-card/60 p-5 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-6 sm:px-6 sm:py-3"
             >
-              <div className="flex items-center gap-3 text-sm text-foreground sm:text-base">
+              <div className="flex items-start gap-3 text-sm text-foreground sm:items-center sm:text-base">
                 <HugeiconsIcon
                   icon={CancelCircleIcon}
-                  className="h-4 w-4 text-destructive"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-destructive sm:mt-0"
                 />
                 <span className="font-medium">{item.before}</span>
               </div>
-              <span className="flex items-center justify-center text-primary">
-                <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4" />
+              <span className="flex justify-center text-muted-foreground/40 sm:text-primary">
+                <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4 rotate-90 sm:rotate-0" />
               </span>
-              <div className="flex items-center gap-3 text-sm text-foreground sm:text-base">
+              <div className="flex items-start gap-3 text-sm text-foreground sm:items-center sm:text-base">
                 <HugeiconsIcon
                   icon={CheckmarkCircle01Icon}
-                  className="h-4 w-4 text-emerald-600"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 sm:mt-0"
                 />
                 <span className="font-medium">{item.after}</span>
               </div>
